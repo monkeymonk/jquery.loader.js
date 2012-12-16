@@ -17,7 +17,7 @@
         return template;
     }; // render
 
-    var loader = function (element, options) {
+    var loader = function () {
         var defaults = {
             className: 'loader',
 
