@@ -17,7 +17,7 @@
         return template;
     }; // render
 
-    var loader = function () {
+    var Loader = function () {
         var defaults = {
             className: 'loader',
 
@@ -89,12 +89,12 @@
             show: show,
             hide: hide
         };
-    }; // loader
+    }; // Loader
 
 
     $.fn.loader = function (options) {
         if (!$.data(this, 'loader')) {
-            $.data(this, 'loader', new loader(this, options));
+            $.data(this, 'loader', new Loader(this, options));
         }
 
         var plugin = $.data(this, 'loader');
