@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /><![endif]-->
+    
+    <title>Demonstration • jquery.loader.js - http://monkeymonk.be</title>
+    
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../jquery.loader.css" rel="stylesheet" />
+
+    <style type="text/css">
+    .container{
+        padding: 10px 0;
+    }
+
+    .hero-unit {
+        position: relative;
+    }
+    </style>
+    
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+
+    <div class="container">
+    
+        <div class="hero-unit">
+            <h1>jquery.loader.js <small>http://monkeymonk.be</small></h1>
+            <p>
+                A simple show/hide loader for your application.
+            </p>
+            <p>
+                <a class="btn btn-primary" href="https://github.com/monkeymonk/jquery.loader.js" rel="external"><i class="icon-download-alt icon-white"></i> GitHub project</a>
+            </p>
+        </div>
+        
+        <div class="btn-group">
+            <button class="btn btn-info" type="button">Show zone loader</button>
+            <button class="btn btn-warning" type="button">Hide zone loader</button>
+            <button class="btn btn-danger" type="button">Show/Hide general loader</button>
+        </div>
+
+        <br/><br/>
+        
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="../jquery.loader.js"></script>
+    <script type="text/javascript">
+    (function ($) {
+        "use strict";
+
+        $(function () { // short document ready
+            
+            $('.btn-group')
+            .on('click', '.btn-info', function () {
+                $('.hero-unit').loader('show');
+            })
+            .on('click', '.btn-warning', function () {
+                $('.hero-unit').loader('hide');
+            })
+            .on('click', '.btn-danger', function () {
+                if ($('body').hasClass('loading')) {
+                    $('body').removeClass('loading')
+                    .loader('hide');
+                } else {
+                    $('body').addClass('loading')
+                    .loader('show', {
+                        overlay: false
+                    });
+                }
+            });
+            
+        });
+    } (jQuery));
+    </script>
+</body>
+</html>
