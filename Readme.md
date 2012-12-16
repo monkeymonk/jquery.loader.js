@@ -1,7 +1,7 @@
 jQuery.loader Plugin - v 1.0
 ==================
 
-Display a loader on your page or a block.
+Display a loader on your page or HTML block element.
 
 Project site: http://monkeymonk.github.com/jquery.loader.js/
 
