@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jquery.loader.js by monkeymonk</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jquery.loader.js</h1>
+        <p>Display a loader on your page or HTML block element.</p>
+
+        <p class="view"><a href="https://github.com/monkeymonk/jquery.loader.js">View the Project on GitHub <small>monkeymonk/jquery.loader.js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/monkeymonk/jquery.loader.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/monkeymonk/jquery.loader.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/monkeymonk/jquery.loader.js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>jQuery.loader Plugin - v 1.0</h1>
+
+<p>Display a loader on your page or HTML block element.</p>
+
+<p>Project site: <a href="http://monkeymonk.github.com/jquery.loader.js/">http://monkeymonk.github.com/jquery.loader.js/</a></p>
+
+<p>Demo: <a href="http://monkeymonk.be/jquery.loader.js/demo/">http://monkeymonk.be/jquery.loader.js/demo/</a></p>
+
+<h2>Usage</h2>
+
+<h3>Basic</h3>
+
+<p>First of all, include <code>jquery.loader.js</code>, <code>jquery.loader.css</code> and <code>loader.gif</code> in your HTML then start to use jQuery.loader.</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">loader</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
+
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">loader</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>Options</h3>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nx">className</span><span class="o">:</span> <span class="s1">'loader'</span><span class="p">,</span>
+
+    <span class="nx">tpl</span><span class="o">:</span> <span class="s1">'&lt;div class="{className} hide"&gt;&lt;div class="{className}-load"&gt;&lt;/div&gt;&lt;div class="{className}-overlay"&gt;&lt;/div&gt;&lt;/div&gt;'</span><span class="p">,</span>
+
+    <span class="nx">delay</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nx">loader</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>       <span class="c1">// if true, you can hide the loader by clicking on it</span>
+    <span class="nx">overlay</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>      <span class="c1">// display or not the overlay</span>
+
+    <span class="c1">// Callback</span>
+    <span class="nx">onHide</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">onShow</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>Methods</h3>
+
+<h4>jQuery().loader('show', options);</h4>
+
+<p>jQuery.loader use a tiny template system that let you an easy way to customize your loader.</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">'show'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">onHide</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// do something...</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+</pre></div>
+
+<h4>jQuery().loader('hide', onHide);</h4>
+
+<p>Hide the loader</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'body'</span><span class="p">).</span><span class="nx">loader</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">);</span>
+
+</pre></div>
+
+<h2>Browsers: Tested and Working In</h2>
+
+<ul>
+<li>IE 6, 7, 8, 9, 10</li>
+<li>Firefox 3+</li>
+<li>Opera 10+</li>
+<li>Safari 4+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/monkeymonk">monkeymonk</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
