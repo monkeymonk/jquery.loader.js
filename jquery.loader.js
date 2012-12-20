@@ -45,7 +45,7 @@
                 }
 
                 if (defaults.loader) {
-                    $('.' + defaults.className + '-load', $self)
+                    $('.' + defaults.className + '-load', $loader)
                     .on('click', function () {
                         $self.loader('hide', defaults.onHide);
                     });
