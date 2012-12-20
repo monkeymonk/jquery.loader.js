@@ -12,7 +12,7 @@ Demo: http://monkeymonk.be/jquery.loader.js/demo/
 
 ### Basic
 
-First of all, include `jquery.loader.js`, `jquery.loader.css` and `loader.gif` in your HTML then start to use jQuery.loader.
+First of all, include `jquery.loader.js (1.526 kb)`, `jquery.loader.min.css (1.135 kb)` and `loader.gif (3.866 kb)` in your HTML then start to use jQuery.loader.
 
 ``` javascript
 $(document).ready(function() {
