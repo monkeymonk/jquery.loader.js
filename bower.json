@@ -1,0 +1,18 @@
+{
+  "name": "monkeymonk/jquery.loader.js",
+  "version": "1.0.0",
+  "main": [
+    "jquery.loader.min.css",
+    "jquery.loader.min.js"
+  ],
+  "description": "Display a loader on your page or HTML block element.",
+  "license": "MIT",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "jquery": ">=1.2"
+  },
+  "devDependencies": {}
+}
